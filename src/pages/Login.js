@@ -28,6 +28,11 @@ const Login = (props) => {
                 alert('Login Successful')
                 props.history.push('/')
                 return;
+            }).catch((err) =>{
+                setAuth(true)
+                alert('Api call failed...still redirecting to landing page')
+                props.history.push('/')
+                return;
             })
         }
     }
